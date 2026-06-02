@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erick ❤️ Jullia</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+font-family:system-ui,Arial,sans-serif;
+background:#0d0812;
+color:white;
+overflow-x:hidden;
+}
+.hearts{position:fixed;inset:0;pointer-events:none}
+.heart{position:absolute;bottom:-30px;width:16px;height:16px;background:#ff5c9f;transform:rotate(45deg);animation:float linear infinite}
+.heart:before,.heart:after{content:"";position:absolute;width:16px;height:16px;background:#ff5c9f;border-radius:50%}
+.heart:before{top:-8px}.heart:after{left:-8px}
+@keyframes float{0%{opacity:0}10%{opacity:1}100%{transform:translateY(-120vh) rotate(45deg);opacity:0}}
+
+#intro{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:radial-gradient(circle,#ff4d8d33,transparent 50%);
+}
+#intro h1{font-size:clamp(3rem,10vw,6rem)}
+.enter{
+margin-top:25px;
+padding:16px 30px;
+border:none;
+border-radius:999px;
+font-size:1rem;
+cursor:pointer;
+background:#ff5c9f;
+color:white;
+}
+
+.hidden{display:none}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.glass{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.1);
+border-radius:28px;
+}
+
+.counter{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+margin:30px 0;
+padding:15px;
+}
+
+.box{min-width:90px;padding:12px}
+.box span{display:block;font-size:1.8rem;color:#ff9dc7;font-weight:bold}
+
+.section{max-width:1100px;margin:auto;padding:60px 20px}
+.card{padding:25px}
+h2{text-align:center;margin-bottom:20px}
+
+.typewriter{
+max-width:800px;
+line-height:1.9;
+margin:auto;
+text-align:center;
+}
+
+.music{
+display:inline-block;
+padding:14px 24px;
+border-radius:999px;
+background:#ff5c9f;
+color:white;
+text-decoration:none;
+margin-top:20px;
+}
+
+.carousel{
+position:relative;
+overflow:hidden;
+border-radius:20px;
+}
+.slides{
+display:flex;
+transition:transform .6s ease;
+}
+.slides img{
+width:100%;
+height:800px;
+object-fit:cover;
+flex-shrink:0;
+background:#2a2330;
+}
+
+.timeline div{
+margin:12px 0;
+padding:15px;
+border-left:4px solid #ff5c9f;
+background:rgba(255,255,255,.05);
+border-radius:12px;
+}
+
+footer{text-align:center;padding:35px;opacity:.8}
+
+@media(max-width:700px){
+.slides img{height:320px}
+}
+</style>
+</head>
+<body>
+
+<div class="hearts"></div>
+
+<section id="intro">
+<h1>Erick ❤️ Jullia</h1>
+<p>Uma pequena parte da nossa história...</p>
+<button class="enter" onclick="entrar()">Entrar ❤️</button>
+</section>
+
+<div id="site" class="hidden">
+
+<section class="hero">
+<h1>Erick ❤️ Jullia</h1>
+<p>Desde 14/04/2025 ✨</p>
+
+<div class="glass counter">
+<div class="box"><span id="d">0</span>Dias</div>
+<div class="box"><span id="h">0</span>Horas</div>
+<div class="box"><span id="m">0</span>Minutos</div>
+<div class="box"><span id="s">0</span>Segundos</div>
+</div>
+
+<a class="music" href="https://youtu.be/oHGcpNLw-A8?si=jC7aGCMk8qQwxf2K" target="_blank">🎵 Nossa Música</a>
+</section>
+
+<section class="section">
+<div class="glass card">
+<h2>💌 Para a Jullia</h2>
+<p id="typing" class="typewriter"></p>
+</div>
+</section>
+
+<section class="section">
+<div class="glass card">
+<h2>📸 Nossos Momentos</h2>
+<div class="carousel">
+<div class="slides" id="slides">
+<img src="foto1.jpg"><img src="foto2.jpg"><img src="foto3.jpg"><img src="foto4.jpg"><img src="foto5.jpg">
+<img src="foto6.jpg"><img src="foto7.jpg"><img src="foto8.jpg"><img src="foto9.jpg"><img src="foto10.jpg">
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="glass card timeline">
+<h2>✨ Nossa História</h2>
+<div>❤️ 14/04/2025 — O começo de tudo.</div>
+<div>📷 essas são as fotos que me trazem mais felicidade so de ver..</div>
+<div>💖 Que nossa história dure por muitos e muitos anos meu amorzinho espero sempre compartilhar minha vida ao seu lado, o seu segundo dias dos namorados namorando vai tomando porra KKKKKKK, Eu te amo meu amor que venha muitos outros.</div>
+</div>
+</section>
+
+<footer>Feito com muito carinho meu amor, espero que goste.
+    por Erick para Jullia</footer>
+
+</div>
+
+<script>
+function entrar(){
+document.getElementById('intro').style.display='none';
+document.getElementById('site').classList.remove('hidden');
+}
+
+const msg="Obrigado por nunca desistir da gente. Espero que a gente sempre esteja em constante evolução, tanto como pessoas quanto como casal. Cada momento ao seu lado se torna um dos momentos mais especiais da minha vida, e eu sou muito grato por tudo o que construímos juntos Eu amo ter você ao meu lado nos dias bons e nos dias difíceis, porque você faz tudo ficar melhor. Amo compartilhar meus sonhos, minhas conquistas e até minhas preocupações com você. Você é uma pessoa muito importante para mim e faz parte dos meus pensamentos todos os dias Eu amo ser seu namorado e amo tudo o que vivemos juntos. Espero continuar criando memórias incríveis ao seu lado, aprendendo mais sobre você e fortalecendo cada vez mais o nosso relacionamento. Você faz meus dias mais felizes e meu coração mais completo. ❤️.";
+let i=0;
+function digitar(){
+if(i<msg.length){
+typing.textContent+=msg.charAt(i++);
+setTimeout(digitar,35);
+}
+}
+
+const start=new Date("2025-04-14T00:00:00");
+function upd(){
+const n=new Date(),x=n-start;
+d.textContent=Math.floor(x/86400000);
+h.textContent=Math.floor(x/3600000)%24;
+m.textContent=Math.floor(x/60000)%60;
+s.textContent=Math.floor(x/1000)%60;
+}
+setInterval(upd,1000);upd();
+
+for(let i=0;i<50;i++){
+let e=document.createElement('span');
+e.className='heart';
+e.style.left=Math.random()*100+'vw';
+e.style.animationDuration=(5+Math.random()*8)+'s';
+document.querySelector('.hearts').appendChild(e);
+}
+
+let current=0;
+setInterval(()=>{
+const slides=document.getElementById('slides');
+current=(current+1)%10;
+slides.style.transform=`translateX(-${current*100}%)`;
+},3000);
+
+digitar();
+</script>
+
+</body>
+</html>
